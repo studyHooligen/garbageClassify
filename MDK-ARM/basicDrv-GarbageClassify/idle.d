@@ -1,0 +1,12 @@
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/src/idle.c
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rthw.h
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\idle.o: ../RT-Thread/rtconfig.h
+basicdrv-garbageclassify\idle.o: ../Core/Inc/RTE_Components.h
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdebug.h
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdef.h
+basicdrv-garbageclassify\idle.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtservice.h
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtm.h
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\idle.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/components/finsh/finsh_api.h

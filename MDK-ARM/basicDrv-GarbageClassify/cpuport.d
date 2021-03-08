@@ -1,0 +1,11 @@
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/libcpu/arm/cortex-m7/cpuport.c
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\cpuport.o: ../RT-Thread/rtconfig.h
+basicdrv-garbageclassify\cpuport.o: ../Core/Inc/RTE_Components.h
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdebug.h
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdef.h
+basicdrv-garbageclassify\cpuport.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtservice.h
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtm.h
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\cpuport.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/components/finsh/finsh_api.h

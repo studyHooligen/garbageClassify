@@ -1,0 +1,12 @@
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/src/scheduler.c
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\scheduler.o: ../RT-Thread/rtconfig.h
+basicdrv-garbageclassify\scheduler.o: ../Core/Inc/RTE_Components.h
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdebug.h
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdef.h
+basicdrv-garbageclassify\scheduler.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtservice.h
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtm.h
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/components/finsh/finsh_api.h
+basicdrv-garbageclassify\scheduler.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rthw.h

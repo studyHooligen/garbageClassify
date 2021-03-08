@@ -1,0 +1,12 @@
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/src/kservice.c
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\kservice.o: ../RT-Thread/rtconfig.h
+basicdrv-garbageclassify\kservice.o: ../Core/Inc/RTE_Components.h
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdebug.h
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdef.h
+basicdrv-garbageclassify\kservice.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtservice.h
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtm.h
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/components/finsh/finsh_api.h
+basicdrv-garbageclassify\kservice.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rthw.h

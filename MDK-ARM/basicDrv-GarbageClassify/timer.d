@@ -1,0 +1,12 @@
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/src/timer.c
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\timer.o: ../RT-Thread/rtconfig.h
+basicdrv-garbageclassify\timer.o: ../Core/Inc/RTE_Components.h
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdebug.h
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdef.h
+basicdrv-garbageclassify\timer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtservice.h
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtm.h
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/components/finsh/finsh_api.h
+basicdrv-garbageclassify\timer.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rthw.h
