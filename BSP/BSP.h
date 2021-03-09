@@ -84,4 +84,12 @@ void steerEngine_SetSpeed(uint32_t channel,steerEngine_Mode speed);
 **/
 void steerEngine_Init(void);
 
+/** @brief  位置检测初始化接口
+ *  @note   该接口中开启了中断
+ *  @author 江榕煜（2021.3.9）
+ *  @param  None
+ *  @retval 位置检测邮箱对象
+**/
+struct rt_mailbox  * PosDtctDevice_Init(void);
+    
 #endif

@@ -1,0 +1,12 @@
+basicdrv-garbageclassify\taskinit.o: ..\TASK\taskInit.c
+basicdrv-garbageclassify\taskinit.o: ..\TASK\taskAPI.h
+basicdrv-garbageclassify\taskinit.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\taskinit.o: ../RT-Thread/rtconfig.h
+basicdrv-garbageclassify\taskinit.o: ../Core/Inc/RTE_Components.h
+basicdrv-garbageclassify\taskinit.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdebug.h
+basicdrv-garbageclassify\taskinit.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtdef.h
+basicdrv-garbageclassify\taskinit.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+basicdrv-garbageclassify\taskinit.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtservice.h
+basicdrv-garbageclassify\taskinit.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtm.h
+basicdrv-garbageclassify\taskinit.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/include/rtthread.h
+basicdrv-garbageclassify\taskinit.o: ../Middlewares/Third_Party/RealThread_RTOS_RT-Thread/components/finsh/finsh_api.h

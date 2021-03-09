@@ -33,6 +33,11 @@
 "basicdrv-garbageclassify\pwmdevice.o"
 "basicdrv-garbageclassify\uart4host.o"
 "basicdrv-garbageclassify\uartfinshchario.o"
+"basicdrv-garbageclassify\extidevice.o"
+"basicdrv-garbageclassify\ui.o"
+"basicdrv-garbageclassify\garbagethrow.o"
+"basicdrv-garbageclassify\hostservice.o"
+"basicdrv-garbageclassify\taskinit.o"
 "basicdrv-garbageclassify\shell.o"
 "basicdrv-garbageclassify\cmd.o"
 "basicdrv-garbageclassify\msh.o"
@@ -50,7 +55,6 @@
 "basicdrv-garbageclassify\thread.o"
 "basicdrv-garbageclassify\timer.o"
 "basicdrv-garbageclassify\cpuport.o"
-"basicdrv-garbageclassify\ui.o"
 --strict --scatter "basicDrv-GarbageClassify\basicDrv-GarbageClassify.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

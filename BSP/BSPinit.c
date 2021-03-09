@@ -20,7 +20,7 @@
   */
 extern void SystemClock_Config(void);
 
-void myBSPInit(void)
+static int myBSPInit(void)
 {
   /**Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
@@ -51,6 +51,8 @@ void myBSPInit(void)
   
   /**Init FinSH */
   FinshIoInit();
+  
+  return 0;
 }
 
 INIT_BOARD_EXPORT(myBSPInit);

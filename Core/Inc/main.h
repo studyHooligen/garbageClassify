@@ -58,10 +58,29 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define POS1_EXTI2_Pin GPIO_PIN_2
+#define POS1_EXTI2_GPIO_Port GPIOE
+#define POS1_EXTI2_EXTI_IRQn EXTI2_IRQn
+#define POS2_EXTI3_Pin GPIO_PIN_3
+#define POS2_EXTI3_GPIO_Port GPIOE
+#define POS2_EXTI3_EXTI_IRQn EXTI3_IRQn
+#define POS3_EXTI4_Pin GPIO_PIN_4
+#define POS3_EXTI4_GPIO_Port GPIOE
+#define POS3_EXTI4_EXTI_IRQn EXTI4_IRQn
+#define POS4_EXTI13_Pin GPIO_PIN_13
+#define POS4_EXTI13_GPIO_Port GPIOC
+#define POS4_EXTI13_EXTI_IRQn EXTI15_10_IRQn
+#define SCANO_EXTI5_Pin GPIO_PIN_5
+#define SCANO_EXTI5_GPIO_Port GPIOA
+#define SCANO_EXTI5_EXTI_IRQn EXTI9_5_IRQn
 #define LED_1_Pin GPIO_PIN_2
 #define LED_1_GPIO_Port GPIOB
 #define LED_2_Pin GPIO_PIN_7
 #define LED_2_GPIO_Port GPIOE
+#define FINSH_UART3_TX_Pin GPIO_PIN_8
+#define FINSH_UART3_TX_GPIO_Port GPIOD
+#define FINSH_UART3_RX_Pin GPIO_PIN_9
+#define FINSH_UART3_RX_GPIO_Port GPIOD
 #define HOST_USART1_TX_Pin GPIO_PIN_9
 #define HOST_USART1_TX_GPIO_Port GPIOA
 #define HOST_USART1_RX_Pin GPIO_PIN_10
@@ -72,10 +91,6 @@ void Error_Handler(void);
 #define PWM_2_GPIO_Port GPIOB
 #define PWM_1_Pin GPIO_PIN_9
 #define PWM_1_GPIO_Port GPIOB
-#define FINSH_UART8_RX_Pin GPIO_PIN_0
-#define FINSH_UART8_RX_GPIO_Port GPIOE
-#define FINSH_UART8_TX_Pin GPIO_PIN_1
-#define FINSH_UART8_TX_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
