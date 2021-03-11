@@ -48,7 +48,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
         // 扫把原点开关
         case(SCANO_EXTI5_Pin):
             HAL_NVIC_DisableIRQ(SCANO_EXTI5_EXTI_IRQn); // 屏蔽中断
-            steerEngine_SetSpeed(1,Stop);  // 卡停扫把
+            steerEngine_SetSpeed(0,Stop);  // 卡停扫把
             break;
     }
 }
@@ -76,20 +76,20 @@ struct rt_mailbox  * PosDtctDevice_Init(void)
     }
     
     /* 启动外部中断 */
-    HAL_NVIC_SetPriority(EXTI2_IRQn,0,0);
-    HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+//    HAL_NVIC_SetPriority(EXTI2_IRQn,0,0);
+//    HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+//    
+//    HAL_NVIC_SetPriority(EXTI3_IRQn,0,0);
+//    HAL_NVIC_EnableIRQ(EXTI3_IRQn);
+//    
+//    HAL_NVIC_SetPriority(EXTI4_IRQn,0,0);
+//    HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+//    
+//    HAL_NVIC_SetPriority(EXTI15_10_IRQn,0,0);
+//    HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
     
-    HAL_NVIC_SetPriority(EXTI3_IRQn,0,0);
-    HAL_NVIC_EnableIRQ(EXTI3_IRQn);
     
-    HAL_NVIC_SetPriority(EXTI4_IRQn,0,0);
-    HAL_NVIC_EnableIRQ(EXTI4_IRQn);
-    
-    HAL_NVIC_SetPriority(EXTI15_10_IRQn,0,0);
-    HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
-    
-    
-    HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(SCANO_EXTI5_EXTI_IRQn, 1, 0);
 //    HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
     
     /* 成功初始化，返回通信邮箱对象 */

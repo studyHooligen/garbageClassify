@@ -32,12 +32,6 @@ rt_sem_t uart4HostInit(hostCommand * recvCachePtr)
 {
     // 初始化接收信号量
     rt_sem_init(&recv_sem, "host Recv", 0, RT_IPC_FLAG_FIFO);
-
-//    char str[8];
-//    sprintf(str,"%d",sizeof(hostCommand));
-//    rt_kprintf("size of hostCommand:");
-//    rt_kprintf(str);
-//    rt_kprintf("\n");
     
     // 启动DMA串口数据接收
     HAL_UART_Receive_DMA(&HostUartHandler,(uint8_t *) recvCachePtr, sizeof(hostCommand));

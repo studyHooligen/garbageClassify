@@ -26,9 +26,22 @@ const uint32_t steerEngine_PWMCounter[_STEER_ENGINE_CHANNEL_] = {
     60000,  60000,  100000
 };
 
-// 不同模式舵机占空比
+// 不同模式舵机占空比，适用通道：0
+//  360度，模式控制速度
 const float steerEngine_ModeDuty[5] = {
     0.0375, 0.0625, 0.075,  0.0875, 0.1125
+};
+
+// 不同位置舵机占空比，适用通道：1
+//  SPT5535LV-320转角：300%对应PWM占空比500~2500us
+const float steerEngine_PosDuty[7] = {
+    0.025,  //  最小占空比：-150°
+    0.03,   //  -135°
+    0.06,   //  -45°
+    0.075,  // 舵机中位：0°
+    0.09,   //  +45°
+    0.12,   //  +135°
+    0.125   //  最大占空比:  +150°
 };
 
 void steerEngine_Stop(uint32_t channel)
@@ -71,18 +84,25 @@ void steerEngine_SetSpeed(uint32_t channel,steerEngine_Mode speed)
         case(0):
             htim17.Instance->CCR1 = duty;
             break;
-        case(1):
-            htim16.Instance->CCR1 = duty;
-            break;
+//        case(1):
+//            htim16.Instance->CCR1 = duty;
+//            break;
         case(2):
             htim2.Instance->CCR2 = duty;
             break;
     }
 }
 
-void steerEngine_SetPos(uint32_t channel,uint32_t position)
+void steerEngine_SetPos(uint32_t channel,steerEngine_Pos position)
 {
-    
+    uint32_t duty =
+        steerEngine_PosDuty[position]*steerEngine_PWMCounter[channel];
+    switch(channel)
+    {
+        case(1):
+            htim16.Instance->CCR1 = duty;
+            break;
+    }
 }
 
 void steerEngine_Init(void)

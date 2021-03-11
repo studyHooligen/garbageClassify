@@ -11,6 +11,7 @@
  * 2021-03-07     江榕煜       first version   2373180028@qq.com
 **/
 
+#include "taskAPI.h"
 #include "BSP.h"
 
 /** @brief  启动PWM输出接口（控制台命令）
@@ -46,7 +47,7 @@ MSH_CMD_EXPORT(beginPWM, begin PWM);
  *      mode(int)               运行模式
  *  @retval 无
 **/
-void setEngine(int argn,char** argv)
+void setEngineSpeed(int argn,char** argv)
 {
     int channel,mode;
     sscanf(argv[1],"%d",&channel);
@@ -72,4 +73,49 @@ void setEngine(int argn,char** argv)
     }
     rt_kprintf("set SteerEngine Success!");
 }
-MSH_CMD_EXPORT(setEngine, set SteerEngine);
+MSH_CMD_EXPORT(setEngineSpeed, set speed of SteerEngine);
+
+/** @brief  调整舵机（控制台命令）
+ *  @note   4个位置
+ *  @author 江榕煜（2021.3.7）
+ *  @param
+ *      channel(unsigned int)   PWM通道号
+ *      position(int)           位置
+ *  @retval 无
+**/
+void setEnginePos(int argn,char** argv)
+{
+    int channel,mode;
+    sscanf(argv[1],"%d",&channel);
+    sscanf(argv[2],"%d",&mode);
+    
+    switch(mode)
+    {
+        case(1):
+            steerEngine_SetPos(channel,Pos1);
+            break;
+        case(2):
+            steerEngine_SetPos(channel,Pos2);
+            break;
+        case(3):
+            steerEngine_SetPos(channel,Pos3);
+            break;
+        case(4):
+            steerEngine_SetPos(channel,Pos4);
+            break;
+    }
+    rt_kprintf("set SteerEngine Success!");
+}
+MSH_CMD_EXPORT(setEnginePos, set position of SteerEngine);
+
+/** @brief  扫把 扫一圈
+ *  @note   
+ *  @author 江榕煜（2021.3.10）
+ *  @param  无
+ *  @retval 无
+**/
+void brushScan(int argn,char** argv)
+{
+    brushScanOnce();
+}
+MSH_CMD_EXPORT(brushScan,let brush scan once);

@@ -40,13 +40,12 @@ typedef struct{
 /** @brief  本地状态反馈帧结构
  *  @note   帧头和帧尾是固定的
  *          命令和参数见README文档说明
- *  @author 江榕煜（2021.2.3）
+ *  @author 江榕煜（2021.3.11）
 **/
 typedef struct{
     uint8_t head; // 帧头（固定为0xA9：1010 1001）
-    uint8_t status;     // 状态码
-    uint16_t duty[16];  // 各通道占空比
-    uint16_t temp[8];   // 各通道温度
+    uint8_t status;     // 状态码  满载信号为'f'  full
+    uint8_t data[5];    // 数据
     uint8_t tail; // 帧尾（固定为0xA6：1010 0110）
 }localMsg;
 

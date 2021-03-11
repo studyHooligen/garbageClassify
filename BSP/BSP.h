@@ -39,6 +39,13 @@ typedef enum steerEngine_Mode{
     FullInver = 4
 } steerEngine_Mode;
 
+typedef enum steerEngine_Pos{
+    Pos1 = 1,
+    Pos2 = 2,
+    Pos3 = 4,
+    Pos4 = 5
+} steerEngine_Pos;
+
 /***********BSP用户接口声明************/
 
 /** @brief  舵机停转
@@ -60,7 +67,7 @@ void steerEngine_Stop(uint32_t channel);
  *  @retval
  *      None
 **/
-void steerEngine_SetPos(uint32_t channel,uint32_t position);
+void steerEngine_SetPos(uint32_t channel,steerEngine_Pos position);
 
 /** @brief  设置舵机速度
  *  @note   适用于360度旋转的速度舵机

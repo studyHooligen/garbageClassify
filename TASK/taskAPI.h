@@ -14,6 +14,8 @@
 
 #include <rtthread.h>
 
+#define __USER_DEBUG__
+
 /** @brief  线程初始化接口
  *  @note   必须调用该接口才会启动垃圾自动投入
  *  @author 江榕煜（2021.3.9）
@@ -31,3 +33,11 @@ rt_mailbox_t threadInit_GarbageThrow(void);
  *  @retval None
 **/
 void threadInit_CmdAnalysis(rt_mailbox_t GbgTrMb);
+
+/** @brief  刷子扫一圈
+ *  @note   
+ *  @author 江榕煜（2021.3.9）
+ *  @param  None
+ *  @retval None
+**/
+void brushScanOnce(void);

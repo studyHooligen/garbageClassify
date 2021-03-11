@@ -44,9 +44,22 @@ static void threadEntry_CmdAnalysis(void* param)
                 // 帧格式检查完毕
                 switch(recvCache.command)
                 {
+                    
                     case('g'):
-                        rt_mb_send(garbageThrowControlServer,
-                                    recvCache.arg_1);
+//                        rt_mb_send(garbageThrowControlServer,
+//                                    recvCache.arg_1);
+                        
+                        #ifdef __USER_DEBUG__
+                        rt_kprintf("recv a command: g\n");
+                        rt_kprintf("    throw garbage into type %d",recvCache.arg_1);
+                        #endif
+                    
+                        break;
+                    
+                    case('f'):
+                        #ifdef __USER_DEBUG__
+                        rt_kprintf("recv a command: f\n");
+                        #endif
                         break;
                     
                     default:
@@ -70,7 +83,7 @@ static void threadEntry_CmdAnalysis(void* param)
 **/
 void threadInit_CmdAnalysis(rt_mailbox_t GbgTrMb)
 {
-    // 初始化硬件通信接口
+    // 初始化硬件通信接口（BSP：uart4Host.c）
     recvCmdSem = uart4HostInit(&recvCache);
     
     // 启动解析服务
