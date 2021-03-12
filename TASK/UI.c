@@ -119,3 +119,38 @@ void brushScan(int argn,char** argv)
     brushScanOnce();
 }
 MSH_CMD_EXPORT(brushScan,let brush scan once);
+
+/** @brief  调试距离触发器 交互模式
+ *  @note   这是一个阻塞命令！！！
+ *  @author 江榕煜（2021.3.12）
+ *  @param  None
+ *  @retval None
+**/
+void fixDetector(int argn,char** argv)
+{
+    //设置到边缘，露出传感器调试口
+    steerEngine_SetPos(1,PosC);
+    
+    rt_kprintf("begin fix detector with 60s\n");
+    
+    /* 调试模式提供60s时间 */
+    for(int j = 0;j<6;j++)
+    {
+        rt_kprintf("----%d----",6-j);
+        for(int i = 0;i<1000;i++)
+        {
+            HAL_GPIO_WritePin(LED_2_GPIO_Port,
+                            LED_2_Pin,
+                            HAL_GPIO_ReadPin(detector_GPI_GPIO_Port,
+                                        detector_GPI_Pin) );
+            rt_thread_mdelay(10);
+        }
+    }
+    /* 恢复常亮，退出调试 */
+    HAL_GPIO_WritePin(LED_2_GPIO_Port,
+                    LED_2_Pin,
+                    GPIO_PIN_RESET);
+    rt_kprintf("end fix!\n");
+
+}
+MSH_CMD_EXPORT(fixDetector,let detector be fixed);

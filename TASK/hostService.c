@@ -46,24 +46,28 @@ static void threadEntry_CmdAnalysis(void* param)
                 {
                     
                     case('g'):
-//                        rt_mb_send(garbageThrowControlServer,
-//                                    recvCache.arg_1);
+                        rt_mb_send(garbageThrowControlServer,
+                                    recvCache.arg_1);
                         
                         #ifdef __USER_DEBUG__
                         rt_kprintf("recv a command: g\n");
-                        rt_kprintf("    throw garbage into type %d",recvCache.arg_1);
+                        rt_kprintf("    throw garbage into type %d\n",recvCache.arg_1);
                         #endif
                     
                         break;
                     
                     case('f'):
+                        
+                        // 触发高度检测
+                        heightDetect();
+                    
                         #ifdef __USER_DEBUG__
                         rt_kprintf("recv a command: f\n");
                         #endif
                         break;
                     
                     default:
-                        rt_kprintf("get a useless cmd");
+                        rt_kprintf("get a useless cmd\n");
                         break;
                 }
             }
@@ -95,15 +99,15 @@ void threadInit_CmdAnalysis(rt_mailbox_t GbgTrMb)
                     sizeof(stack_CmdAnalys),
                     0,0) != RT_EOK)
     {
-        rt_kprintf("init cmd analys thread fail!");
+        rt_kprintf("init cmd analys thread fail!\n");
         return;
     }
     
-                    
     garbageThrowControlServer = GbgTrMb;
                     
     // 启动线程
     rt_thread_startup(&threadCmdAnalys_Source);
+    rt_kprintf("init cmd analys thread success!\n");
                     
     return;
 }

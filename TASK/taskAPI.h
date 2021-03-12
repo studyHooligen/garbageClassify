@@ -41,3 +41,19 @@ void threadInit_CmdAnalysis(rt_mailbox_t GbgTrMb);
  *  @retval None
 **/
 void brushScanOnce(void);
+
+/** @brief  满载检测线程初始化
+ *  @note   
+ *  @author 江榕煜（2021.3.12）
+ *  @param  None
+ *  @retval None
+**/
+void threadInit_heightDetect(void);
+
+/** @brief  触发一次测量反馈
+ *  @note   使用前注意先初始化
+ *  @author 江榕煜（2021.3.12）
+ *  @param  None
+ *  @retval None
+**/
+void heightDetect(void);

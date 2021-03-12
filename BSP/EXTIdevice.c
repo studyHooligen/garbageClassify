@@ -32,9 +32,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     switch(GPIO_Pin)
     {
         // 圆盘鼠标开关
-        case(POS1_EXTI2_Pin):   // 位置1
-            rt_mb_send(&POS_mb,1);
-            break;
+//        case(POS1_EXTI2_Pin):   // 位置1
+//            rt_mb_send(&POS_mb,1);
+//            break;
         case(POS2_EXTI3_Pin):   // 位置2
             rt_mb_send(&POS_mb,2);
             break;
@@ -46,8 +46,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
             break;
         
         // 扫把原点开关
-        case(SCANO_EXTI5_Pin):
-            HAL_NVIC_DisableIRQ(SCANO_EXTI5_EXTI_IRQn); // 屏蔽中断
+        case(SCANO_EXTI_Pin):
+//            rt_kprintf("get scano_exti");
+            HAL_NVIC_DisableIRQ(SCANO_EXTI_EXTI_IRQn); // 屏蔽中断
             steerEngine_SetSpeed(0,Stop);  // 卡停扫把
             break;
     }
@@ -89,7 +90,7 @@ struct rt_mailbox  * PosDtctDevice_Init(void)
 //    HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
     
     
-    HAL_NVIC_SetPriority(SCANO_EXTI5_EXTI_IRQn, 1, 0);
+    HAL_NVIC_SetPriority(SCANO_EXTI_EXTI_IRQn, 0, 0);
 //    HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
     
     /* 成功初始化，返回通信邮箱对象 */

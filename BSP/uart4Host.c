@@ -40,6 +40,17 @@ rt_sem_t uart4HostInit(hostCommand * recvCachePtr)
     return &recv_sem;
 }
 
+/** @brief  发送数据给上位机
+ *  @note   
+ *  @author 江榕煜（2021.3.12）
+ *  @param  
+ *      sendPtr(localMsg *) 发送的帧指针
+ *  @retval None
+**/
+void uart4Host_send(localMsg* sendPtr)
+{
+    HAL_UART_Transmit_DMA(&HostUartHandler,(uint8_t *)sendPtr,sizeof(localMsg));
+}
 
 /** @brief  串口接收完毕回调函数
  *  @note   
@@ -59,11 +70,14 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         //rt_kprintf("get a msg frame\n");
         
         // 由用户处理命令时启动
-//        // 重新启动接收
-//        HAL_UART_Receive_DMA(&HostUartHandler, &recvCache, sizeof(recvCache));
         
         // 发出成功接收信号量
         rt_sem_release(&recv_sem);
+        
+//        
+//        // 重新启动接收
+//        HAL_UART_Receive_DMA(&HostUartHandler, &recvCache, sizeof(recvCache));
+//        
     }
     
     //rt_interrupt_leave();

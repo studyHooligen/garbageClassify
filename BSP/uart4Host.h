@@ -64,13 +64,11 @@ typedef struct{
 **/
 rt_sem_t uart4HostInit(hostCommand * recvCachePtr);
 
-/** @brief  发送状态给上位机接口
+/** @brief  发送数据给上位机
  *  @note   
- *          使用上位机的功能前必须调用该接口
- *  @author 江榕煜（2021.2.3）
- *  @param 
- *          sendPtr(localMsg *)     发送数据信息块指针
- *  @retval 
- *          rt_sem_t    成功发送信号量控制器
+ *  @author 江榕煜（2021.3.12）
+ *  @param  
+ *      sendPtr(localMsg *) 发送的帧指针
+ *  @retval None
 **/
-rt_sem_t uart4Host_SendStatus(localMsg * sendPtr);
+void uart4Host_send(localMsg* sendPtr);

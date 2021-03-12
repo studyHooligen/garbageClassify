@@ -58,9 +58,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define POS1_EXTI2_Pin GPIO_PIN_2
-#define POS1_EXTI2_GPIO_Port GPIOE
-#define POS1_EXTI2_EXTI_IRQn EXTI2_IRQn
 #define POS2_EXTI3_Pin GPIO_PIN_3
 #define POS2_EXTI3_GPIO_Port GPIOE
 #define POS2_EXTI3_EXTI_IRQn EXTI3_IRQn
@@ -70,6 +67,11 @@ void Error_Handler(void);
 #define POS4_EXTI13_Pin GPIO_PIN_13
 #define POS4_EXTI13_GPIO_Port GPIOC
 #define POS4_EXTI13_EXTI_IRQn EXTI15_10_IRQn
+#define SCANO_EXTI_Pin GPIO_PIN_2
+#define SCANO_EXTI_GPIO_Port GPIOA
+#define SCANO_EXTI_EXTI_IRQn EXTI2_IRQn
+#define detector_GPI_Pin GPIO_PIN_3
+#define detector_GPI_GPIO_Port GPIOA
 #define SCANO_EXTI5_Pin GPIO_PIN_5
 #define SCANO_EXTI5_GPIO_Port GPIOA
 #define SCANO_EXTI5_EXTI_IRQn EXTI9_5_IRQn

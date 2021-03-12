@@ -40,6 +40,7 @@ typedef enum steerEngine_Mode{
 } steerEngine_Mode;
 
 typedef enum steerEngine_Pos{
+    PosC = 3,
     Pos1 = 1,
     Pos2 = 2,
     Pos3 = 4,

@@ -77,6 +77,8 @@ static void threadEntry_GarbageThrow(void * param)
             }
             // 扫把扫描一圈
             brushScanOnce();
+            rt_thread_mdelay(4000);
+            steerEngine_SetPos(1,Pos2);
         }
     }
 }
@@ -120,6 +122,8 @@ rt_mailbox_t threadInit_GarbageThrow(void)
     /* 启动线程 */
     rt_thread_startup(&threadGarbageThrow_Source);  // 启动线程
     
+    rt_kprintf("init garbage throwing thread success!\n");
+    
     /* 初始化位置检测设备（BSP：EXTIdevice.c） */
     pos_mb = PosDtctDevice_Init();
     
@@ -137,9 +141,9 @@ void brushScanOnce(void)
     steerEngine_SetSpeed(0,SlowInver);
     rt_thread_mdelay(1000);
     
-    if(__HAL_GPIO_EXTI_GET_IT(SCANO_EXTI5_Pin) != 0x00U)
-        __HAL_GPIO_EXTI_CLEAR_IT(SCANO_EXTI5_Pin);
+    if(__HAL_GPIO_EXTI_GET_IT(SCANO_EXTI_Pin) != 0x00U)
+        __HAL_GPIO_EXTI_CLEAR_IT(SCANO_EXTI_Pin);
     
-    HAL_NVIC_EnableIRQ(SCANO_EXTI5_EXTI_IRQn);
+    HAL_NVIC_EnableIRQ(SCANO_EXTI_EXTI_IRQn);
 }
 

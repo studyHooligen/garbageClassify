@@ -38,6 +38,7 @@
 "basicdrv-garbageclassify\garbagethrow.o"
 "basicdrv-garbageclassify\hostservice.o"
 "basicdrv-garbageclassify\taskinit.o"
+"basicdrv-garbageclassify\loaddetect.o"
 "basicdrv-garbageclassify\shell.o"
 "basicdrv-garbageclassify\cmd.o"
 "basicdrv-garbageclassify\msh.o"
